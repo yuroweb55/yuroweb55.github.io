@@ -54,5 +54,5 @@ function getip(ip) {
         })
     }).catch()
 }
-window.addEventListener('resize', ri);
-ri();
+//window.addEventListener('resize', ri);
+//ri();
