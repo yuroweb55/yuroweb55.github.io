@@ -186,7 +186,7 @@ video {
 }
 
 :root {
-    --img-height: calc(100vw / 1.50093808630394)
+    --img-height: calc(100vw / 1.5009380863039398779079647283651866018772125244140625)
 }
 
 @media (min-width: 800px) {
