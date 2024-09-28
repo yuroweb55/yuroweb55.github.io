@@ -39,12 +39,6 @@ h4 {
     font-size: calc(1.27rem+.3vw)
 }
 
-@media (min-width: 1200px) {
-    h4 {
-        font-size:1.5rem
-    }
-}
-
 h6 {
     font-size: 1rem
 }
@@ -81,6 +75,9 @@ p {
 }
 
 @media (min-width: 1200px) {
+    h4 {
+        font-size:1.5rem
+    }
     .container {
         max-width:1140px
     }
@@ -190,6 +187,12 @@ video {
 
 :root {
     --img-height: calc(100vw / 1.50093808630394)
+}
+
+@media (min-width: 800px) {
+    :root {
+        --img-height:533px
+    }
 }
 
 .img-sgs {
