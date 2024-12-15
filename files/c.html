@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>โค้ด diskpart</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+
+body {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    margin: 0;
+    font-family: 'Sarabun', sans-serif;
+    color: #333;
+}
+
+h {
+    font-size: 2.5rem;
+    font-family: 'Sarabun', sans-serif;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.c {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+t {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 1.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+t:hover {
+    color: #fff;
+    background: #0078ff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+span {
+    font-family: 'Sarabun', sans-serif;
+}
+</style>
+</head>
+<body>
+<script>
+window.onload = function() {
+    document.getElementById("ba").style.display = "none";
+    document.getElementById("bb").style.display = "none";
+    document.getElementById("bc").style.display = "none";
+    document.getElementById("bd").style.display = "none";
+    document.getElementById("bh").style.display = "none";
+    document.getElementById("bi").style.display = "none";
+};
+
+function copyToClipboard(text, spanId, showId) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    document.getElementById(spanId).style.display = "none";
+    document.getElementById(showId).style.display = "block";
+}
+
+function a() {
+    copyToClipboard("diskpart", "aa", "ba");
+}
+
+function b() {
+    copyToClipboard("select disk 2", "ab", "bb");
+}
+
+function c() {
+    copyToClipboard("clean", "ac", "bc");
+}
+
+function d() {
+    copyToClipboard("create part pri", "ad", "bd");
+}
+
+function h() {
+    copyToClipboard("active", "ah", "bh");
+}
+
+function i() {
+    copyToClipboard("format fs=btfs quick", "ai", "bi");
+}
+</script>
+
+<div class="c">
+    <h>โค้ด diskpart</h>
+    <div><a onclick="a()"><t><span id="aa">diskpart</span><span id="ba">diskpart ✅</span></t></a></div>
+    <div><a onclick="b()"><t><span id="ab">select disk 2</span><span id="bb">select disk 2 ✅</span></t></a></div>
+    <div><a onclick="c()"><t><span id="ac">clean</span><span id="bc">clean ✅</span></t></a></div>
+    <div><a onclick="d()"><t><span id="ad">create part pri</span><span id="bd">create part pri ✅</span></t></a></div>
+    <div><a onclick="h()"><t><span id="ah">active</span><span id="bh">active ✅</span></t></a></div>
+    <div><a onclick="i()"><t><span id="ai">format fs=btfs quick</span><span id="bi">format fs=btfs quick ✅</span></t></a></div>
+</div>
+</body>
+</html>
