@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-6 text-center">File Manager</h1>
+        <div class="flex justify-between items-center mb-4">
+            <!-- Back Button -->
+            <button id="back-btn" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 hidden">
+                Back
+            </button>
+            <!-- File Management Section -->
+            <div class="flex items-center space-x-2">
+                <input id="file-input" type="file" class="hidden">
+                <label for="file-input" class="px-4 py-2 bg-blue-600 text-white rounded-lg cursor-pointer hover:bg-blue-700">
+                    Select File
+                </label>
+                <button id="upload-btn" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                    Upload
+                </button>
+                <!-- Create File and Folder Buttons -->
+                <button id="create-file-btn" class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+                    Create File
+                </button>
+                <button id="create-folder-btn" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
+                    Create Folder
+                </button>
+            </div>
+        </div>
+        
+        
+        <!-- File List Section -->
+        <ul id="file-list" class="bg-white shadow rounded-lg divide-y divide-gray-200"></ul>
+        <!-- Editor Section -->
+        <div id="editor-container" class="mt-6 p-4 bg-white shadow rounded-lg hidden">
+            <h3 class="text-xl font-semibold mb-4"></h3>
+            <textarea id="editor" class="w-full h-60 p-2 border border-gray-300 rounded-lg"></textarea>
+            <div class="flex justify-end space-x-2 mt-4">
+                <button id="cancel-btn" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">Cancel</button>
+                <button id="save-btn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://yuroweb55.github.io/files/sshome/script.js"></script>
+</body>
+</html>
