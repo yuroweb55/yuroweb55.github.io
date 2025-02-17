@@ -17,7 +17,7 @@ createFileBtn.addEventListener('click', () => {
     }).then((result) => {
         if (result.isConfirmed && result.value) {
             const fileName = result.value;
-            fetch('/api/create-file', {
+            fetch('./api/create-file', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ path: currentPath, fileName }),
@@ -46,7 +46,7 @@ createFolderBtn.addEventListener('click', () => {
     }).then((result) => {
         if (result.isConfirmed && result.value) {
             const folderName = result.value;
-            fetch('/api/create-folder', {
+            fetch('./api/create-folder', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ path: currentPath, folderName }),
@@ -79,7 +79,7 @@ function showAlert(message, type = 'success') {
 
 // โหลดไฟล์และโฟลเดอร์
 function fetchFiles(path) {
-    fetch(`/api/files?path=${encodeURIComponent(path)}`)
+    fetch(`./api/files?path=${encodeURIComponent(path)}`)
         .then(res => res.json())
         .then(data => {
             currentPath = path;
@@ -123,7 +123,7 @@ uploadBtn.addEventListener('click', () => {
     formData.append('file', file);
     formData.append('targetPath', currentPath);
 
-    fetch('/api/upload', { method: 'POST', body: formData })
+    fetch('./api/upload', { method: 'POST', body: formData })
         .then(res => res.json())
         .then(() => {
             Swal.fire('Success!', 'File uploaded successfully!', 'success');
@@ -134,7 +134,7 @@ uploadBtn.addEventListener('click', () => {
 
 // เปิดตัวแก้ไขไฟล์
 function openEditor(filePath) {
-    fetch(`/api/file?path=${encodeURIComponent(filePath)}`)
+    fetch(`./api/file?path=${encodeURIComponent(filePath)}`)
         .then(res => res.json())
         .then(data => {
             editorContainer.querySelector('h3').textContent = `Editing: ${filePath}`;
@@ -146,7 +146,7 @@ function openEditor(filePath) {
 // บันทึกไฟล์
 editorContainer.querySelector('#save-btn').addEventListener('click', () => {
     const content = document.getElementById('editor').value;
-    fetch('/api/file', {
+    fetch('./api/file', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ path: editorContainer.querySelector('h3').textContent.replace('Editing: ', ''), content }),
