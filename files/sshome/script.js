@@ -6,7 +6,7 @@ const backBtn = document.getElementById('back-btn');
 const createFileBtn = document.getElementById('create-file-btn');
 const createFolderBtn = document.getElementById('create-folder-btn');
 
-let currentPath = './';
+let currentPath = '../';
 
 createFileBtn.addEventListener('click', () => {
     Swal.fire({
