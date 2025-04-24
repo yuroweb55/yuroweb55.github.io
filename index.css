@@ -1,1 +1,88 @@
-.cta{position:fixed;width:100%;height:100%;top:0;display:flex;justify-content:center;padding-top:40px;overflow:auto}a,a:hover{text-decoration:none;color:#000}.back{min-width:calc(100vw - 20px);min-height:100vh;background:url(icons.webp)no-repeat;background-position:center;background-size:cover;opacity:.125}main{text-align:center}.icon{width:150px;height:150px;border-radius:50%;margin-bottom:20px}.hhgs{max-width:500px;height:75px;background-color:#fff;box-shadow:10px 12px 20px rgba(0,0,0,.7);transition:all .1s ease 0s;border-radius:20px;display:flex;justify-content:space-between;align-items:center;padding:2.5px 20px;margin-bottom:25px}.hhgs:hover,#corner-button:hover{transform:scale(1.1)}.icon-TrueMoney{background-image:url(TrueMoney.webp)}.icon-Youtube{background-image:url(Youtube.webp)}.icon-Facebook{background-image:url(Facebook.webp)}.icon-Tiktok{background-image:url(Tiktok.webp)}.icon-Gmail{background-image:url(gmail.webp)}.icon-Discord{background-image:url(Discord.webp)}.iconvb{background-size:cover;background-position:center;width:70px;height:70px}
+.cta {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    overflow: auto
+}
+
+a,a:hover {
+    text-decoration: none;
+    color: #000
+}
+
+.back {
+    min-width: calc(100vw - 20px);
+    min-height: 100vh;
+    background: url(icons.webp)no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: .125
+}
+
+main {
+    text-align: center
+}
+
+.icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px
+}
+
+.hhgs {
+    max-width: 500px;
+    height: 75px;
+    background-color: #fff;
+    box-shadow: 10px 12px 20px rgba(0,0,0,.7);
+    transition: all .1s ease 0s;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5px 20px;
+    margin-bottom: 25px
+}
+
+.hhgs:hover,#corner-button:hover {
+    transform: scale(1.1)
+}
+
+.icon-TrueMoney {
+    background-image: url(TrueMoney.webp)
+}
+
+.icon-Youtube {
+    background-image: url(Youtube.webp)
+}
+
+.icon-Facebook {
+    background-image: url(Facebook.webp)
+}
+
+.icon-Tiktok {
+    background-image: url(Tiktok.webp)
+}
+
+.icon-Gmail {
+    background-image: url(gmail.webp)
+}
+
+.icon-Discord {
+    background-image: url(Discord.webp)
+}
+
+.icon-Instagram {
+    background-image: url(Instagram.webp)
+}
+
+.iconvb {
+    background-size: cover;
+    background-position: center;
+    width: 70px;
+    height: 70px
+}
